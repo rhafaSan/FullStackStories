@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { act } from 'react-dom/test-utils';
-import * as ReactDom from 'react-dom';
+import * as ReactDOM from 'react-dom';
 import InputWithLabel from './InputWithLabel';
 
 const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>{
@@ -11,7 +11,7 @@ const InputWithLabelInstance = {
     id: 'search',
     value: 'React',
     onInputChange: handleSearch,
-    label: 'search'
+    label: 'Search'
 }
 
 describe('InputWithLabel', function() {
@@ -19,7 +19,7 @@ describe('InputWithLabel', function() {
         let container = document.createElement('div');
         document.body.appendChild(container);
         act(() => {
-            ReactDom.render(
+            ReactDOM.render(
                 <InputWithLabel
                     id={InputWithLabelInstance.id}
                     value={InputWithLabelInstance.value}

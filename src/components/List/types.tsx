@@ -1,5 +1,5 @@
 type Story = {
-    objId: number;
+    objectId: number;
     url: string;
     title: string;
     author: string;

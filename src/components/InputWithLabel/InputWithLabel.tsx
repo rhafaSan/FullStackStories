@@ -26,8 +26,8 @@ const InputWithLabel = ({
     onInputChange 
 }: InputWithLabelProps) => (
     <div>
-      <Label htmlFor={id}>{label} </Label> &nbsp;
-        <Input 
+      <label htmlFor={id}>{label}</label> &nbsp;
+        <input 
           id={id} 
           type={type} 
           value={value} 

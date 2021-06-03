@@ -1,23 +1,6 @@
+import React from 'react';
 import ListProps from "./types"
 import styled from 'styled-components';
-const list = [
-    {
-      title: 'React',
-      url: 'https://reactjs.org/',
-      author: 'Jordan Walke',
-      num_comments: 3,
-      points: 4,
-      objId: 0
-    },
-    {
-      title: 'Redux',
-      url: 'https://redux.js.org/',
-      author: 'Dan Abramov, Andrew Clark',
-      num_comments: 2,
-      points: 5,
-      objId: 1
-    }
-  ]
 
   const DivMap = styled.div`
     /* border: 1px solid #999797; */
@@ -45,18 +28,17 @@ const list = [
   
  const List = ({ list } : ListProps) =>
    (
-    <DivMap>
+    <>
     { list.map(item => (
-      <DivKey key={item.objId}>
+      <div key={item.objectId}>
         <span>
-          <Link href={item.url}> {item.title} </Link>
+          <a href={item.url}>{item.title}</a>
         </span>
-        <Text> {item.author} </Text>
-        <Text>{item.num_comments} </Text>
-        <Text>{item.points} </Text>
-      </DivKey>
-    )) }
-    </DivMap>
+        <span> {item.author} </span>
+        <span>{item.num_comments} </span>
+        <span>{item.points} </span>
+      </div>))}
+    </>
    )
 
   export default List

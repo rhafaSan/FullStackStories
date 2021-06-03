@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const useSemiPersistentState = (key: any, initialState: any) => {
+const useSemiPersistentState = (
+  key: string, 
+  initialState: string
+  ): [ string, (newValue: string) =>void] => {
 
     const [value, setValue] = useState(
       localStorage.getItem(key) || initialState
