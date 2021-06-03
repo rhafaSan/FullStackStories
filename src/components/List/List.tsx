@@ -43,7 +43,7 @@ const list = [
     color: #000000c1;
   `
   
- export const List = ({list} : ListProps) =>
+ const List = ({ list } : ListProps) =>
    (
     <DivMap>
     { list.map(item => (
@@ -58,3 +58,5 @@ const list = [
     )) }
     </DivMap>
    )
+
+  export default List

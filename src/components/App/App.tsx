@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useSemiPersistentState from '../../Hooks/UseSemiPersistentState';
 import  InputWithLabel  from '../InputWithLabel/InputWithLabel';
-import { List } from '../List/List';
+import List from '../List/List';
 import styled from 'styled-components';
 
 const H1 = styled.h1`
